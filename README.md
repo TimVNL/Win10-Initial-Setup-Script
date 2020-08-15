@@ -17,8 +17,9 @@ This is a PowerShell script for automation of routine tasks done after fresh ins
 
 ## Additions and Tweaks
 As I mentioned before my project is a fork of @Disassembler0 [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) with some useful additions and tweaks such as
+- Added create recovery point option (does not restore everything this script removes).
+- Xbox Game Features enabled by default for games such as Forza :) 
 - Removed server specific tweaks
-- Added create recovery point option (does not restore everything this script removes) 
 - Keep Office Hub and MS Paint
 
 &nbsp;
@@ -151,4 +152,4 @@ The logging is done using PowerShell `Start-Transcript` cmdlet, which writes ext
 
 ## Forking
 
-If you want to fork this project your free to do so but I encourage to fork @Disassembler0 [Win10-Initial-Setup-Script](ttps://github.com/Disassembler0/Win10-Initial-Setup-Script) instead as this is the original source of this project.
+If you want to fork this project your free to do so but I encourage to fork @Disassembler0 [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) instead as this is the original source of this project.
