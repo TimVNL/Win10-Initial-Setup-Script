@@ -30,18 +30,18 @@ DisableFeedback                 # EnableFeedback
 DisableTailoredExperiences      # EnableTailoredExperiences
 DisableAdvertisingID            # EnableAdvertisingID
 DisableWebLangList              # EnableWebLangList
-DisableBiometrics             # EnableBiometrics
+DisableBiometrics               # EnableBiometrics
 # DisableCamera                 # EnableCamera
 # DisableMicrophone             # EnableMicrophone
 DisableErrorReporting           # EnableErrorReporting
-SetP2PUpdateLocal             # SetP2PUpdateInternet          # SetP2PUpdateDisable
+SetP2PUpdateDisable             # SetP2PUpdateLocal          # SetP2PUpdateInternet
 DisableDiagTrack                # EnableDiagTrack
 DisableWAPPush                  # EnableWAPPush
 # EnableClearRecentFiles        # DisableClearRecentFiles
 # DisableRecentFiles            # EnableRecentFiles
 
 ### UWP Privacy Tweaks ###
-# DisableUWPBackgroundApps        # EnableUWPBackgroundApps
+# DisableUWPBackgroundApps      # EnableUWPBackgroundApps
 # DisableUWPVoiceActivation     # EnableUWPVoiceActivation
 # DisableUWPNotifications       # EnableUWPNotifications
 # DisableUWPAccountInfo         # EnableUWPAccountInfo
@@ -97,7 +97,7 @@ DisableSMB1                     # EnableSMB1
 # DisableNCSIProbe              # EnableNCSIProbe
 # DisableConnectionSharing      # EnableConnectionSharing
 DisableRemoteAssistance         # EnableRemoteAssistance
-# EnableRemoteDesktop           # DisableRemoteDesktop
+DisableRemoteDesktop            # EnableRemoteDesktop
 
 ### Service Tweaks ###
 # DisableUpdateMSRT             # EnableUpdateMSRT
@@ -137,7 +137,7 @@ DisableLockScreenRS1            # EnableLockScreenRS1
 DisableAccessibilityKeys        # EnableAccessibilityKeys
 ShowTaskManagerDetails          # HideTaskManagerDetails
 ShowFileOperationsDetails       # HideFileOperationsDetails
-# EnableFileDeleteConfirm       # DisableFileDeleteConfirm
+EnableFileDeleteConfirm         # DisableFileDeleteConfirm
 HideTaskbarSearch               # ShowTaskbarSearchIcon         # ShowTaskbarSearchBox
 HideTaskView                    # ShowTaskView
 ShowLargeTaskbarIcons           # ShowSmallTaskbarIcons
@@ -177,7 +177,7 @@ DisableNavPaneExpand            # EnableNavPaneExpand
 # ShowNavPaneAllFolders         # HideNavPaneAllFolders
 HideNavPaneLibraries            # ShowNavPaneLibraries
 # EnableFldrSeparateProcess     # DisableFldrSeparateProcess
-# EnableRestoreFldrWindows      # DisableRestoreFldrWindows
+DisableRestoreFldrWindows       # EnableRestoreFldrWindows
 # ShowEncCompFilesColor         # HideEncCompFilesColor
 # DisableSharingWizard          # EnableSharingWizard
 # HideSelectCheckboxes          # ShowSelectCheckboxes
@@ -231,13 +231,13 @@ DisableMediaSharing             # EnableMediaSharing
 # DisableMediaOnlineAccess      # EnableMediaOnlineAccess
 # EnableDeveloperMode           # DisableDeveloperMode
 InstallMediaPlayer              # UninstallMediaPlayer
-UninstallInternetExplorer     # InstallInternetExplorer
-UninstallWorkFolders          # InstallWorkFolders
-UninstallHelloFace            # InstallHelloFace
+UninstallInternetExplorer       # InstallInternetExplorer
+UninstallWorkFolders            # InstallWorkFolders
+UninstallHelloFace              # InstallHelloFace
 # UninstallMathRecognizer       # InstallMathRecognizer
 # UninstallPowerShellV2         # InstallPowerShellV2
 # UninstallPowerShellISE        # InstallPowerShellISE
-InstallLinuxSubsystem         # UninstallLinuxSubsystem
+InstallLinuxSubsystem           # UninstallLinuxSubsystem
 # InstallHyperV                 # UninstallHyperV
 # UninstallSSHClient            # InstallSSHClient
 # InstallSSHServer              # UninstallSSHServer
@@ -245,7 +245,7 @@ InstallLinuxSubsystem         # UninstallLinuxSubsystem
 # InstallNET23                  # UninstallNET23
 SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation
 AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
-# UninstallPDFPrinter           # InstallPDFPrinter
+InstallPDFPrinter               # UninstallPDFPrinter
 UninstallXPSPrinter             # InstallXPSPrinter
 RemoveFaxPrinter                # AddFaxPrinter
 # UninstallFaxAndScan           # InstallFaxAndScan
