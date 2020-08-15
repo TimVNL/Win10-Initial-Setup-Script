@@ -18,7 +18,7 @@ This is a PowerShell script for automation of routine tasks done after fresh ins
 ## Additions and Tweaks
 As I mentioned before my project is a fork of @Disassembler0 [Win10-Initial-Setup-Script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) with some useful additions and tweaks such as
 - Removed server specific tweaks
-- Added enable / disable Dark Mode option
+- Added create recovery point option (does not restore everything this script removes) 
 - Keep Office Hub and MS Paint
 
 &nbsp;

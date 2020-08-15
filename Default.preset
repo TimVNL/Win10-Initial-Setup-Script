@@ -12,6 +12,9 @@
 ### Require administrator privileges ###
 RequireAdmin
 
+### TimVNL specific
+# CreateRestorePoint
+
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
 DisableCortana                  # EnableCortana
