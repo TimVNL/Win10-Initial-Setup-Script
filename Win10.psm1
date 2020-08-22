@@ -14,14 +14,6 @@
 #region TimVNL specific
 ##########
 
-# Create a system recovery point before running the script which can be restored when something bad happens.
-# The restore only partially works use the Enable or Install options if you are missing something that the script removed.
-Function CreateRestorePoint {
-  Write-Output "Creating Restore Point..."
-  Enable-ComputerRestore -Drive "C:\"
-  Checkpoint-Computer -Description "before Win10-Initial-Setup-Script" -RestorePointType "MODIFY_SETTINGS"
-}
-
 ##########
 #region Privacy Tweaks
 ##########

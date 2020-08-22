@@ -13,7 +13,6 @@
 RequireAdmin
 
 ### TimVNL specific
-# CreateRestorePoint
 
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
