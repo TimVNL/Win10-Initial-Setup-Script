@@ -16,11 +16,9 @@
 
 # Create a restore point before starting
 Function CreateRestorePoint {
-	{
-		$Title = "Restore point"
-		$Message = "To create a restore point enter the required letter"
-		$Options = "&Create", "&Do not create", "&Skip"
-	}
+	$Title = "Restore point"
+	$Message = "To create a restore point enter the required letter"
+	$Options = "&Create", "&Do not create", "&Skip"
 	$DefaultChoice = 2
 	$Result = $Host.UI.PromptForChoice($Title, $Message, $Options, $DefaultChoice)
 
@@ -41,11 +39,9 @@ Function CreateRestorePoint {
 		}
 		"1"
 		{
-			{
-				$Title = "Restore point"
-				$Message = "To remove all restore points enter the required letter"
-				$Options = "&Delete", "&Skip"
-			}
+			$Title = "Restore point"
+			$Message = "To remove all restore points enter the required letter"
+			$Options = "&Delete", "&Skip"
 			$DefaultChoice = 1
 			$Result = $Host.UI.PromptForChoice($Title, $Message, $Options, $DefaultChoice)
 
