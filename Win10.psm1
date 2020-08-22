@@ -14,6 +14,69 @@
 #region TimVNL specific
 ##########
 
+# Create a restore point before starting
+Function CreateRestorePoint {
+	{
+		$Title = "Restore point"
+		$Message = "To create a restore point enter the required letter"
+		$Options = "&Create", "&Do not create", "&Skip"
+	}
+	$DefaultChoice = 2
+	$Result = $Host.UI.PromptForChoice($Title, $Message, $Options, $DefaultChoice)
+
+	switch ($Result)
+	{
+		"0"
+		{
+			if (-not (Get-ComputerRestorePoint))
+			{
+				Enable-ComputerRestore -Drive $env:SystemDrive
+			}
+			# Set system restore point creation frequency to 5 minutes
+			New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore" -Name SystemRestorePointCreationFrequency -PropertyType DWord -Value 5 -Force
+			# Descriptive name format for the restore point: <Month>.<date>.<year> <time>
+			$CheckpointDescription = Get-Date -Format "dd.MM.yyyy HH:mm"
+			Checkpoint-Computer -Description $CheckpointDescription -RestorePointType MODIFY_SETTINGS
+			New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore" -Name SystemRestorePointCreationFrequency -PropertyType DWord -Value 1440 -Force
+		}
+		"1"
+		{
+			{
+				$Title = "Restore point"
+				$Message = "To remove all restore points enter the required letter"
+				$Options = "&Delete", "&Skip"
+			}
+			$DefaultChoice = 1
+			$Result = $Host.UI.PromptForChoice($Title, $Message, $Options, $DefaultChoice)
+
+			switch ($Result)
+			{
+				"0"
+				{
+					# Delete all restore points
+					Get-CimInstance -ClassName Win32_ShadowCopy | Remove-CimInstance
+				}
+				"1"
+				{
+					{
+						Write-Verbose -Message "Skipped" -Verbose
+					}
+				}
+			}
+		}
+		"2"
+		{
+			{
+				Write-Verbose -Message "Skipped" -Verbose
+			}
+		}
+	}
+}
+##########
+#region TimVNL specific
+##########
+
+
 ##########
 #region Privacy Tweaks
 ##########
